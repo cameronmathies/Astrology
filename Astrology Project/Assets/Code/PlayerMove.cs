@@ -29,9 +29,13 @@ public class PlayerMove : MonoBehaviour
         {
             transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKey(KeyCode.Z))
         {
-            transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.down * moveSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.X))
+        {
+            transform.Rotate(Vector3.up * moveSpeed * Time.deltaTime);
         }
     }
 }

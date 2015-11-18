@@ -25,15 +25,27 @@ public class PlayerMove : MonoBehaviour
         {
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.PageUp))
         {
             transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.PageDown))
+        {
+            transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Rotate(Vector3.left * moveSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Rotate(Vector3.right * moveSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(Vector3.down * moveSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(Vector3.up * moveSpeed * Time.deltaTime);
         }
